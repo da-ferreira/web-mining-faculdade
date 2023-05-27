@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class="container">
+  <h1 class="title">Analizador de sentimentos!</h1>
+  <div>
+    <h1 class="polarity-text">A polaridade da frase é <span class="polarity-value">{{ polaridade }}</span></h1>
+    <div class="image-container">
+      <img class="polarity-image" src="{{ url_for('static', filename='positivo.png') }}" alt="Positivo"/>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .polarity-text {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+  
+  .polarity-value {
+    font-weight: bold;
+  }
+  
+  .image-container {
+    width: 300px;
+  }
+  
+  .polarity-image {
+    width: 100%;
+  }  
+</style>

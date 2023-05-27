@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>❤️ Web Mining ❤️</title>
+</head>
+
+<body>
+    <main>
+        <form action="{{ url_for("hello_word") }}" method="post">
+            <h1>Analizador de sentimentos!</h1>
+                <div>
+                    <label for="fname">Digite sua opinião:</label>
+                    <textarea id="user_input" name="fname" rows="10" required></textarea>
+                </div>
+            <div>
+                <input type="submit" id="submit" value="Enviar" />
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
+<style>
+    /* aplique na main um estilo responsivo, no celular ela deve se abrir */
+    main {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /* Estilos globais */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    /* Estilos do formulário */
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+        color: #555;
+    }
+
+    textarea {
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        resize: vertical;
+        min-height: 100px;
+        padding: 0px;
+    }
+
+    input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #ff5a5f;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #e74043;
+    }
+</style>
